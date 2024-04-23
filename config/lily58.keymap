@@ -39,7 +39,7 @@
             // | SHIFT |  X  |  X   |  X   |  X   |  X   |   X   |  |   X   |  X   |  X    |  X    |  X   |   X   |   X   |
             //                     | trans  | trans  | trans|  trans |  | BSPC | trans| "|"  | trans   |
             bindings = <
-                &kp TAB  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F_FSLH  &trans  &kp F_QUES  &kp F_EQL  &trans
+                &kp TAB  &trans  &trans  &trans  &trans  &trans                   &trans  &kp F_FSLH  &trans  &kp F_QUES  &kp F_EQL  &trans
                 &kp TAB  &trans  &kp UP   &kp F_EURO   &trans  &trans                    &trans  &trans  &trans   &trans   &kp F_PLUS &kp MINUS
                 &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &trans   &trans                  &trans  &trans  &trans   &kp F_ODIA &kp F_ADIA &kp F_ARNG
                 &kp LSHFT &trans  &trans   &trans   &trans  &trans  &trans   &trans &trans  &trans   &trans   &trans   &trans   &trans
