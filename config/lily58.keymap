@@ -43,7 +43,7 @@
                 &kp TAB,  &trans,  &kp UP,   &kp F_EURO,   &trans,  &trans,                    &trans,  &trans,  &trans,   &trans,   &kp F_PLUS, &kp MINUS,
                 &kp LCTRL, &kp LEFT, &kp DOWN, &kp RIGHT, &trans,   &trans,                   &trans,  &trans,  &trans,   &kp F_ODIA, &kp F_ADIA, &kp F_ARNG,
                 &kp LSHFT, &trans,   &trans,   &trans,   &trans,   &trans,   &trans,   &trans, &trans,  &trans,   &trans,   &trans,   &trans,   &trans,
-                &trans, &trans, &trans, &trans, &kp BSPC, &trans, &trans, &kp F_PIPE, &trans
+                &trans, &trans, &trans, &trans, &kp BSPC, &trans, &kp F_PIPE, &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -61,7 +61,7 @@
                 &kp GRAVE, &trans,  &trans,  &kp F_AT, &trans,  &trans,                    &trans,    &trans,  &trans,  &trans,  &trans,  &kp F_UNDS,
                 &kp CAPS, &trans,  &trans,  &trans,  &trans,  &trans,                    &trans,    &trans,  &trans,  &trans,  &trans,  &trans,
                 &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,  &trans,
-                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
