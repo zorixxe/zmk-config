@@ -23,9 +23,9 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| GUI  | Alt   |
             bindings = <
                 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
-                &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSLH
+                &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp F_BSLH 
                 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp F_LBKT    &kp F_RBKT  &kp N  &kp M    &kp COMMA &kp DOT &kp F_FSLH &kp RSHFT
                 &kp LALT  &kp LGUI &mo 1  &kp SPACE &kp RET  &mo 2  &kp RGUI &kp RALT
             >;
 
@@ -34,16 +34,16 @@
 
         lower_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |  TAB  |  X  |  X  |  X   |  X   |  X   |                   |  X   |  /    |  X    |  ?   |   =   |   ´   |
-            // |  TAB  |  X  |  ^   |  €   |  X   |  X   |                   |  X   |  X    |  X    |  X   |   +   |   -   |
-            // |  CTRL |  <- |  v   |  ->  |  X   |  X   |                   |  X   |  X    |  X    |  Ö   |   Ä   |   Å   |
-            // | SHIFT |  X  |  X   |  X   |  X   |  X   |   X   |  |   X   |  X   |  X    |  X    |  X   |   X   |   X   |
+            // |  ESC   |  !  |  "  |  #  |  $  |  %  |                        |  &  |  /  |  (  |  )  |  =  |  F12  |
+            // |  TAB  |  ~  |  @  |  €  |     |  <  |                        |  >  |  \  |  [  |  ]  |  +  |  *   |
+            // |  CTRL | "|" |     |  £  |  ¤  |     |                        |     |     |  {  |  }  |  ?  |      |
+            // | SHIFT |  X  |  X   |  X   |  X   |  X   |  {  |  }  |  X   |  X    |  <     |  >   |   ?  |   X   |
             //                     | trans  | trans  | trans|  trans |  | BSPC | trans| "|"  | trans   |
             bindings = <
-                &kp TAB  &trans  &trans  &trans  &trans  &trans                   &trans  &kp F_FSLH  &trans  &kp F_QUES  &kp F_EQL  &trans
-                &kp TAB  &trans  &kp UP   &kp F_EURO   &trans  &trans                    &trans  &trans  &trans   &trans   &kp F_PLUS &kp MINUS
-                &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &trans   &trans                  &trans  &trans  &trans   &kp F_ODIA &kp F_ADIA &kp F_ARNG
-                &kp LSHFT &trans  &trans   &trans   &trans  &trans  &trans   &trans &trans  &trans   &trans   &trans   &trans   &trans
+                &kp ESC   &kp F_EXLM &kp F_DQUO &kp F_HASH &kp F_DLR  &kp F_PERC &kp F_AMPR &kp F_FSLH  &kp F_LPRN &kp F_RPRN &kp F_EQL  &kp F12
+                &kp TAB &kp F_TILD &kp F_AT   &kp F_EURO &trans     &kp F_LABK &kp F_RABK &kp F_BSLH  &kp F_LBKT &kp F_RBKT &kp F_PLUS &kp F_ASTR
+                &kp LCTRL  &kp F_PIPE &trans     &kp F_PND  &kp F_CURR &trans     &trans     &trans      &kp F_LABK &kp F_RABK &kp F_QUES &trans
+                &kp LSHFT &trans  &trans   &trans   &trans  &trans  &kp F_LBRC   &kp F_RBRC  &trans  &trans   &trans   &trans   &trans   &trans
                 &trans &trans &trans &trans &kp BSPC &trans &kp F_PIPE &trans
             >;
 
@@ -53,16 +53,16 @@
         raise_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3  |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |  TAB  |  X  |  X  |  €   |  X   |  X   |                   |  X   |  X    |  X    |  X   |   X   |    _   |
-            // |  CTRL |  X  |  X  |  X   |  X   |  X   |                   |  X   |  X    |  X    |  X   |   X   |   X   |
-            // | SHIFT |  X  |  X   |  X   |  X   |  X   |   X   |  |   X   |  X   |  X    |  X    |  X   |   X   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| GUI  | BSPC   |
+            // |  TAB  |  X  |  ^   |  €   |  X   |  X   |                   |  X   |  X    |  X    |  X   |   +   |   -   |
+            // |  CTRL |  <- |  v   |  ->  |  X   |  X   |                   |  X   |  X    |  X    |  Ö   |   Ä   |   Å   |
+            // | SHIFT |  X  |  X   |  X   |  X   |  X   |  {  |  }  |  X   |  X    |  <     |  >   |   ?  |   X   |
+            //                     | trans  | trans  | trans|  trans |  | BSPC | trans| "|"  | trans   |
             bindings = <
                 &kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                     &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
-                &kp GRAVE &trans  &trans  &kp F_AT &trans  &trans                   &trans   &trans  &trans  &trans  &trans  &kp F_UNDS
-                &kp CAPS &trans  &trans  &trans  &trans  &trans                    &trans    &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans
+                &kp TAB  &trans  &kp UP   &kp F_EURO   &trans  &trans                    &trans  &trans  &trans   &trans   &kp F_PLUS &kp MINUS
+                &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &trans   &trans                  &trans  &trans  &trans   &kp F_ODIA &kp F_ADIA &kp F_ARNG
+                &kp LSHFT &trans  &trans   &trans   &trans  &trans  &kp F_LBRC   &kp F_RBRC  &trans  &trans   &trans   &trans   &trans   &trans
+                &trans &trans &trans &trans &kp BSPC &trans &kp F_PIPE &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
