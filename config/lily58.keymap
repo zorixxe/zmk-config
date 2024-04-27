@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "definitions.h"
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 / {
     keymap {
@@ -75,13 +76,13 @@
             // |  TAB  |  ~  |  @  |  €  |     |  <  |                        |  >  |  \  |  [  |  ]  |  +  |  *   |
             // |  CTRL | "|" |     |  £  |  ¤  |     |                        |     |     |  {  |  }  |  ?  |      |
             // | SHIFT |  X  |  X   |  X   |  X   |  X   |  {  |  }  |  X   |  X    |  <     |  >   |   ?  |   X   |
-            //                     | trans  | trans  | trans|  trans |  | BSPC | trans| "|"  | trans   |
+            //                     | trans  | trans  | trans|  trans |  | BSPC | trans| "|"  | power Tog   |
             bindings = <
                 &kp ESC   &kp F_EXLM &kp F_DQUO &kp F_HASH &kp F_DLR  &kp F_PERC  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
                 &kp TAB &kp F_TILD &kp F_AT   &kp F_EURO &trans     &kp F_LABK &kp F_RABK &kp F_BSLH  &kp F_LBKT &kp F_RBKT &kp F_PLUS &kp F_ASTR
                 &kp LCTRL  &kp F_PIPE &trans     &kp F_PND  &kp F_CURR &trans     &trans     &trans     &kp F_LBRC   &kp F_RBRC  &kp F_QUES &trans
                 &kp LSHFT &trans  &trans   &trans   &trans  &trans  &kp F_LBRC   &kp F_RBRC  &trans  &trans   &kp F_LABK &kp F_RABK &kp F_QUES   &kp F_UNDS
-                &trans &trans &trans &trans &kp BSPC &trans &kp F_PIPE &trans
+                &trans &trans &trans &trans &kp BSPC &trans &kp F_PIPE  &ext_power EP_TOG
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
