@@ -44,8 +44,8 @@
             bindings = <
                 &kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                     &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
                 &kp TAB  &kp F_DLR  &kp UP   &kp F_EURO   &trans  &trans                    &trans  &trans  &trans   &kp F_TILD   &kp F_PLUS &kp F_PIPE
-                &trans &kp LEFT &kp DOWN &kp RIGHT &trans   &trans                  &trans  &trans  &trans   &kp F_ODIA &kp F_ADIA &kp F_ARNG
-                &kp LSHFT &trans  &trans   &trans   &trans  &trans  &kp F_LBRC   &kp F_RBRC  &kp TaskMgr  &kp F_PLUS   &kp F_LABK &kp F_RABK &kp F_QUOT &kp DEL
+                &trans &kp LEFT &kp DOWN &kp RIGHT &kp F_CURR   &trans                  &trans  &trans  &trans   &kp F_ODIA &kp F_ADIA &kp F_ARNG
+                &kp LSHFT &trans  &trans   &trans   &kp F_SECT  &trans  &kp F_LBRC   &kp F_RBRC  &kp TaskMgr  &kp F_PLUS   &kp F_LABK &kp F_RABK &kp F_QUOT &kp DEL
                 &trans &trans &trans &trans &kp BSPC &kp LALT   &kp LCTRL   &kp DEL
             >;
 
