@@ -11,7 +11,7 @@
 #define RAISE   2
 #define ADJUST  3
 
-// Hold tap key timers
+// Hold tap key timerss
 #define QUICK_TAP    250
 #define TAPPING_TERM 175
 #define HR_TAPPING_TERM 175
