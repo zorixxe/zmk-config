@@ -2,4 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Pin to the same ZMK version as config/west.yml. Using @main while west.yml
+    # pins v0.3.0 breaks CI: main's workflow runs `west boards --format "{qualifiers}"`
+    # which older Zephyr (from v0.3.0) does not support → KeyError: 'qualifiers'.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
